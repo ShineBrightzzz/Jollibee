@@ -13,11 +13,43 @@
     margin-bottom: 2rem;
 }
 
+.order-details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-content {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.order-items {
+    margin: 1rem 0;
+    min-height: 100px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+    background: #fff;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
 .order-item {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 1rem;
     border-bottom: 1px solid #eee;
+    align-items: center;
+    background: #fff;
 }
 
 .order-item:last-child {
@@ -28,33 +60,62 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex: 1;
 }
 
-.order-item-quantity {
-    background-color: #e3000b;
-    color: white;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
+.order-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-item-info {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .order-item-name {
     font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-item-quantity {
+    font-size: 1rem;
+    color: #666;
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.order-items:empty::after {
+    content: 'Chưa có món ăn nào được chọn';
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
 }
 
 .order-item-price {
     font-weight: bold;
     color: #e3000b;
+    min-width: 100px;
+    text-align: right;
+    font-size: 1.1rem;
 }
 
 .order-summary {
     margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 2px dashed #eee;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 .summary-row {
@@ -62,16 +123,26 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .summary-row.total {
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #e3000b;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .payment-section {
     text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .payment-section h2 {
@@ -86,21 +157,62 @@
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
-#qrcode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.qr-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.payment-details {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.bank-details {
+    margin: 1rem 0;
     padding: 1rem;
-    background: white;
+    background: #f8f8f8;
+    border-radius: 8px;
 }
 
-#qrcode img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.bank-details p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.bank-details span {
+    font-family: monospace;
+    font-size: 1.1em;
+    color: #e3000b;
+}
+
+.payment-status {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #fff9e6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.payment-status i {
+    color: #e3000b;
+}
+
+.payment-status p {
+    margin: 0;
+    color: #333;
+}
+
+.bank-details strong {
+    color: #e3000b;
+    font-size: 1.1em;
 }
 
 #qrcode img, #qrcode canvas {

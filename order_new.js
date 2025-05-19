@@ -1,24 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get cart data from localStorage
     let cart = JSON.parse(localStorage.getItem('jollibeeCart')) || [];
-    console.log('Cart loaded:', cart); // Thêm log để kiểm tra
+    console.log('Cart loaded:', cart);
     
     // Get DOM elements
     const orderItemsContainer = document.getElementById('orderItems');
     const totalElement = document.getElementById('total');
     const orderIdElement = document.getElementById('orderId');
-    const paymentStatus = document.getElementById('paymentStatus');    // Generate order ID
+    const paymentStatus = document.getElementById('paymentStatus');
+    
+    // Generate order ID
     const orderId = generateOrderId();
     orderIdElement.textContent = orderId;
     
     function displayOrderItems() {
-        console.log('Displaying items:', cart); // Thêm log để kiểm tra
+        console.log('Displaying items:', cart);
         
         // Clear the container
         orderItemsContainer.innerHTML = '';
         
         if (!cart || cart.length === 0) {
-            // Show empty cart message instead of redirecting
             orderItemsContainer.innerHTML = '<div class="empty-cart">Chưa có món ăn nào được chọn</div>';
             return;
         }
@@ -42,32 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <span class="order-item-price">${(item.price * item.quantity).toLocaleString('vi-VN')}₫</span>
-            `;            orderItemsContainer.appendChild(orderItemElement);
+            `;
+            orderItemsContainer.appendChild(orderItemElement);
         });
         
-        // Giả lập kiểm tra trạng thái thanh toán
-        setTimeout(() => {
-            paymentStatus.innerHTML = `
-                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
-                <p>Đã thanh toán thành công!</p>
-            `;
-        }, 3000);    }
-    
-    function generateQRCode(data) {
-        if (qrcodeContainer) {
-            // Tạo QR code với kích thước lớn hơn
-            new QRCode(qrcodeContainer, {
-                text: data,
-                width: 256,
-                height: 256,
-                colorDark: "#e3000b",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
+        if (paymentStatus) {
+            // Giả lập kiểm tra trạng thái thanh toán
+            setTimeout(() => {
+                paymentStatus.innerHTML = `
+                    <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                    <p>Đã thanh toán thành công!</p>
+                `;
+            }, 3000);
         }
     }
     
-    // Generate a random order ID
     function generateOrderId() {
         const date = new Date();
         const year = date.getFullYear().toString().slice(-2);

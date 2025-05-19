@@ -19,31 +19,42 @@
     </header>
 
     <main>
-        <section class="order-container">
-            <div class="order-details">
+        <section class="order-container">            <div class="order-details">
                 <h2>Món ăn đã chọn</h2>
-                <div id="orderItems" class="order-items">
-                    <!-- Order items will be displayed here -->
-                </div>
-                
-                <div class="order-summary">
-                    <div class="summary-row total">
-                        <span>Tổng tiền:</span>
-                        <span id="total">0₫</span>
+                <div class="order-content">
+                    <div id="orderItems" class="order-items">
+                        <!-- Order items will be displayed here -->
+                    </div>
+                    
+                    <div class="order-summary">
+                        <div class="summary-row total">
+                            <span>Tổng tiền:</span>
+                            <span id="total">0₫</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="payment-section">
+              <div class="payment-section">
                 <h2>Quét mã để thanh toán</h2>
                 <div class="qr-container">
-                    <div id="qrcode"></div>
-                    <p class="order-id">Mã đơn: <span id="orderId"></span></p>
+                    <img src="images/qr.jpg" alt="QR Code" class="qr-image">
+                    <div class="payment-details">
+                        <p class="order-id">Mã đơn: <span id="orderId"></span></p>
+                        <div class="bank-details">
+                            <p><strong>MB BANK</strong></p>
+                            <p>STK: <span>0123456789</span></p>
+                            <p>Tên: <span>JOLLIBEE VIETNAM</span></p>
+                        </div>
+                    </div>
                 </div>
                 <p class="payment-instructions">
                     Sử dụng ứng dụng ngân hàng để quét mã QR<br>
                     Đơn hàng sẽ được xử lý sau khi thanh toán thành công
                 </p>
+                <div class="payment-status" id="paymentStatus">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Đang chờ thanh toán...</p>
+                </div>
                 <a href="index.html" class="back-link">
                     <i class="fas fa-arrow-left"></i> Quay lại menu
                 </a>
@@ -53,6 +64,6 @@
 
     <footer>
         <p>&copy; 2025 Jollibee. Đã đăng ký bản quyền.</p>
-    </footer>    <script src="order.js"></script>
+    </footer>    <script src="order_new.js"></script>
 </body>
 </html>

@@ -120,13 +120,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }    closeCartModal.addEventListener('click', () => {
         cartModal.style.display = 'none';
-    });
-
-    // Handle checkout button click
+    });    // Handle checkout button click
     document.getElementById('modalCheckoutBtn').addEventListener('click', () => {
         // Save cart to localStorage before redirecting
         localStorage.setItem('jollibeeCart', JSON.stringify(cart));
-        // The redirect is handled by the <a> tag now
+        console.log('Cart saved:', cart); // Thêm log để kiểm tra
     });// Cart functions
     function addToCart(itemId) {
         const menuItem = menuItems.find(item => item.id === itemId);
