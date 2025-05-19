@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jollibee Food Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+
+    <header>
+        <div class="navigation">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm món tại Jollibee...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-container" id="menuItems">
+            <!-- Menu items will be loaded dynamically via JavaScript -->
+        </section>
+    </main>
+
+
+    <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+    </div>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Giỏ hàng</h2>
+                <button class="close-modal" id="closeCartModal">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will appear here -->
+            </div>
+            <div class="cart-summary">
+                <div class="total">
+                    <span>Tổng cộng:</span>
+                    <span id="cartTotal">0₫</span>
+                </div>
+                <a href="order.html" class="checkout-btn" id="modalCheckoutBtn">Thanh toán</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jollibee. Đã đăng ký bản quyền.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

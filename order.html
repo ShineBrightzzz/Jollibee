@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jollibee - Đơn hàng của bạn</title>
+    <link rel="stylesheet" href="styles.css">    <link rel="stylesheet" href="order.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/jollibee-logo.png" alt="Jollibee Logo" class="logo">
+            </a>
+        </div>
+        <h1>Xác nhận đơn hàng</h1>
+    </header>
+
+    <main>
+        <section class="order-container">
+            <div class="order-details">
+                <h2>Món ăn đã chọn</h2>
+                <div id="orderItems" class="order-items">
+                    <!-- Order items will be displayed here -->
+                </div>
+                
+                <div class="order-summary">
+                    <div class="summary-row total">
+                        <span>Tổng tiền:</span>
+                        <span id="total">0₫</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-section">
+                <h2>Quét mã để thanh toán</h2>
+                <div class="qr-container">
+                    <div id="qrcode"></div>
+                    <p class="order-id">Mã đơn: <span id="orderId"></span></p>
+                </div>
+                <p class="payment-instructions">
+                    Sử dụng ứng dụng ngân hàng để quét mã QR<br>
+                    Đơn hàng sẽ được xử lý sau khi thanh toán thành công
+                </p>
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Quay lại menu
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jollibee. Đã đăng ký bản quyền.</p>
+    </footer>    <script src="order.js"></script>
+</body>
+</html>

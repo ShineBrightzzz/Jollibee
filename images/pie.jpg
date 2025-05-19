@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+    <rect width="300" height="200" fill="#fff9c4"/>
+    <path d="M100,80 L200,80 L220,120 L80,120 Z" fill="#ffeb3b"/>
+    <path d="M100,80 Q150,60 200,80" stroke="#fbc02d" stroke-width="3" fill="none"/>
+    <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#e65100">
+        Peach Mango Pie
+    </text>
+    <circle cx="130" cy="100" r="10" fill="#ffab00"/>
+    <circle cx="170" cy="95" r="8" fill="#ffab00"/>
+</svg>

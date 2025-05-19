@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+    <circle cx="150" cy="100" r="80" fill="#e3000b"/>
+    <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">
+        Jollibee
+    </text>
+    <path d="M120,70 Q150,40 180,70" stroke="white" stroke-width="5" fill="none"/>
+    <circle cx="120" cy="85" r="10" fill="white"/>
+    <circle cx="180" cy="85" r="10" fill="white"/>
+</svg>

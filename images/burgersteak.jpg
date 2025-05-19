@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+    <rect width="300" height="200" fill="#e8eaf6"/>
+    <ellipse cx="150" cy="120" rx="90" ry="40" fill="#c5cae9"/>
+    <ellipse cx="150" cy="80" rx="60" ry="20" fill="#5c6bc0"/>
+    <path d="M120,80 Q150,90 180,80" fill="#3949ab"/>
+    <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#fff">
+        Burger Steak
+    </text>
+    <path d="M130,70 Q150,60 170,70" stroke="#1a237e" stroke-width="3" fill="none"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+    <rect width="300" height="200" fill="#fce4ec"/>
+    <ellipse cx="150" cy="100" rx="90" ry="40" fill="#f8bbd0"/>
+    <path d="M100,90 Q150,70 200,90 Q150,110 100,90" fill="#ec407a"/>
+    <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#880e4f">
+        Palabok Fiesta
+    </text>
+    <circle cx="125" cy="85" r="5" fill="#ffc107"/>
+    <circle cx="150" cy="90" r="5" fill="#ffc107"/>
+    <circle cx="175" cy="82" r="5" fill="#ffc107"/>
+</svg>
